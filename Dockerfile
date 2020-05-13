@@ -3,7 +3,7 @@ FROM php:7.4-fpm-alpine
 # php ext
 RUN apk update && \
     apk --no-cache upgrade && \
-    apk --no-cache add libmcrypt-dev mysql-client git openssl-dev
+    apk --no-cache add libmcrypt-dev mysql-client git openssl-dev oniguruma-dev
 
 # php ext redis
 RUN docker-php-source extract && \
